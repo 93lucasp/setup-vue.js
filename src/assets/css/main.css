@@ -1,0 +1,6 @@
+.navBar {
+  background: yellow;
+  display: flex;
+  color: red; }
+  .navBar .logo {
+    width: 15px; }
