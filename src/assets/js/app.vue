@@ -1,16 +1,10 @@
 <template>
-  <h1 class="red">{{msg}}</h1>
+ <vue-message></vue-message>
 </template>
 
 <script>
-    export default {
-    data () {
-        return {
-        msg: 'Hello world!'
-        }
-    }
-    }
-    </script>
+
+</script>
 
 <style>
   .red {
