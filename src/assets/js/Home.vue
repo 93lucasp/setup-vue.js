@@ -1,28 +1,21 @@
 <template>
 <div>
-  <h1 class="red">{{msg}}</h1>
-  <button @click="changeMessage">Change</button>
-  </div>
+    <message v-for="message in 5"></message>
+</div>
 </template>
 
 <script>
+    import Message from './Message.vue';
     export default {
-        data: function () {
-            return {
-            msg: 'Hello world!'
-            }
-        },
-        methods: {
-            changeMessage() {
-                this.msg = "Ciaoooooo"
-            }
+        components: {
+            "message": Message
         }
     }
     </script>
 
 <style>
   .red {
-    color: #f00;
+    color: green;
   }
 </style>
 

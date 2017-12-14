@@ -8272,14 +8272,30 @@ exports.insert = function (css) {
 }
 
 },{}],5:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".red {\n  color: #f00;\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".red {\n  color: yellow;\n}")
 ;(function(){
-"use strict";
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _User = require('./components/User.vue');
+
+var _User2 = _interopRequireDefault(_User);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    components: {
+        appUser: _User2.default
+    }
+};
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('vue-message')}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-12"},[_c('app-user')],1)])])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -8289,11 +8305,48 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-38754c07", __vue__options__)
   } else {
-    hotAPI.reload("data-v-38754c07", __vue__options__)
+    hotAPI.rerender("data-v-38754c07", __vue__options__)
   }
 })()}
-},{"vue":3,"vue-hot-reload-api":2,"vueify/lib/insert-css":4}],6:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".red {\n  color: #f00;\n}")
+},{"./components/User.vue":8,"vue":3,"vue-hot-reload-api":2,"vueify/lib/insert-css":4}],6:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".red {\n  color: green;\n}")
+;(function(){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _Message = require("./Message.vue");
+
+var _Message2 = _interopRequireDefault(_Message);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    components: {
+        "message": _Message2.default
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',_vm._l((5),function(message){return _c('message')}))}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-763e01e9", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-763e01e9", __vue__options__)
+  }
+})()}
+},{"./Message.vue":7,"vue":3,"vue-hot-reload-api":2,"vueify/lib/insert-css":4}],7:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".red {\n  color: green;\n}")
 ;(function(){
 "use strict";
 
@@ -8324,12 +8377,149 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-763e01e9", __vue__options__)
+    hotAPI.createRecord("data-v-229e5026", __vue__options__)
   } else {
-    hotAPI.reload("data-v-763e01e9", __vue__options__)
+    hotAPI.reload("data-v-229e5026", __vue__options__)
   }
 })()}
-},{"vue":3,"vue-hot-reload-api":2,"vueify/lib/insert-css":4}],7:[function(require,module,exports){
+},{"vue":3,"vue-hot-reload-api":2,"vueify/lib/insert-css":4}],8:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("div[data-v-6b8026ca] {\n    background-color: lightblue;\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _UserDetail = require('./UserDetail.vue');
+
+var _UserDetail2 = _interopRequireDefault(_UserDetail);
+
+var _UserEdit = require('./UserEdit.vue');
+
+var _UserEdit2 = _interopRequireDefault(_UserEdit);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    data: function data() {
+        return {
+            name: "Luca",
+            age: 24
+        };
+    },
+    methods: {
+        changeName: function changeName() {
+            this.name = "Alex";
+        },
+        resetName: function resetName() {
+            this.name = "Luca";
+        },
+        changeAge: function changeAge() {
+            this.age = 30;
+        }
+    },
+    components: {
+        appUserDetail: _UserDetail2.default,
+        appUserEdit: _UserEdit2.default
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"component"},[_c('h1',[_vm._v("The User Component")]),_vm._v(" "),_c('p',[_vm._v("I'm an awesome User!")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.changeName()}}},[_vm._v("change my name")]),_vm._v("\n    "+_vm._s(_vm.name)+"\n    "),_c('hr'),_vm._v(" "),_c('div',{staticClass:"container"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-lg-6"},[_c('app-user-detail',{attrs:{"userName":_vm.name,"userAge":_vm.age,"resetFn":_vm.resetName},on:{"nameWasReset":function($event){_vm.name = $event}}})],1),_vm._v(" "),_c('div',{staticClass:"col-lg-6"},[_c('app-user-edit',{attrs:{"userAge":_vm.age,"changeUserAge":_vm.changeAge},on:{"ageWasEdited":function($event){_vm.age = $event}}})],1)])])])}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-6b8026ca"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6b8026ca", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-6b8026ca", __vue__options__)
+  }
+})()}
+},{"./UserDetail.vue":9,"./UserEdit.vue":10,"vue":3,"vue-hot-reload-api":2,"vueify/lib/insert-css":4}],9:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("div[data-v-59761d3b] {\n    background-color: lightcoral;\n}")
+;(function(){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: {
+        userName: {
+            type: String,
+            required: true
+        },
+        userAge: Number,
+        resetFn: Function
+    },
+    methods: {
+        resetName: function resetName() {
+            this.name = "Luca";
+            this.$emit("nameWasReset", this.name);
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"component"},[_c('h3',[_vm._v("You may view the User Details here")]),_vm._v(" "),_c('p',[_vm._v("Many Details")]),_vm._v("\n    user name: "+_vm._s(_vm.userName)+" "),_c('br'),_vm._v("\n    user age: "+_vm._s(_vm.userAge)+" "),_c('br'),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.resetName()}}},[_vm._v("Reset name")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.resetFn()}}},[_vm._v("Reset name")])])}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-59761d3b"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-59761d3b", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-59761d3b", __vue__options__)
+  }
+})()}
+},{"vue":3,"vue-hot-reload-api":2,"vueify/lib/insert-css":4}],10:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("div[data-v-57967af4] {\n    background-color: lightgreen;\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: ['userAge', 'changeUserAge'],
+    methods: {
+        editAge: function editAge() {
+            this.userAge = 30;
+            this.$emit('ageWasEdited', this.userAge);
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"component"},[_c('h3',[_vm._v("You may edit the User here")]),_vm._v("\n     user age: "+_vm._s(_vm.userAge)+" "),_c('br'),_vm._v(" "),_c('button',{on:{"click":_vm.editAge}},[_vm._v("Edit age")]),_vm._v(" "),_c('button',{on:{"click":function($event){_vm.changeUserAge()}}},[_vm._v("Edit age2")])])}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-57967af4"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-57967af4", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-57967af4", __vue__options__)
+  }
+})()}
+},{"vue":3,"vue-hot-reload-api":2,"vueify/lib/insert-css":4}],11:[function(require,module,exports){
 var Vue = require('vue')
 var App = require('./App.vue')
 var Home = require('./Home.vue')
@@ -8343,4 +8533,4 @@ new Vue({
         return createElement(App)
     }
 })
-},{"./App.vue":5,"./Home.vue":6,"vue":3}]},{},[7]);
+},{"./App.vue":5,"./Home.vue":6,"vue":3}]},{},[11]);
